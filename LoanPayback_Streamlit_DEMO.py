@@ -14,12 +14,12 @@ with open(file_to_load, 'rb') as file:
     loaded_model = pickle.load(file)
 
 # --- Streamlit UI ---
-st.set_page_config(page_title="💰 Loan Default ML Predictor", layout="centered")
-st.title("💰 Loan Default Prediction")
+st.set_page_config(page_title="Default ML Predictor", layout="centered")
+st.title("Default Predictor")
 st.markdown("Enter a potential loan customer's details to predict their risk of default.")
 
 # User input
-ownhome = st.checkbox("Own Their Home?")
+ownhome = st.checkbox("Do They Own Their Home?")
 income = st.slider("Family Income", 20000, 1000000, 80000)
 dti = st.slider("Debt-to-Income Ratio", 0, 40, 10)
 fico = st.slider("FICO Score", 300, 850, 650)
